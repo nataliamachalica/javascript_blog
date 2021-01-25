@@ -60,17 +60,35 @@
 
     /* for each article */
 
-    
+    const articles = document.querySelectorAll(optArticleSelector);
+        console.log('artiles:', articles);
+
+        let html='';
+
+    for (let article of articles){
 
     /* get the article id */
 
-    /* find the title element */
+    const articleId = article.getAttribute('id');
+    console.log('articleId:', articleId);
 
+    /* find the title element */
     /* get the title from the title element */
 
+    const articleTitle = article.querySelector(optTitleSelector).innerHTML;
+        console.log('articleTitle:', articleTitle);
+        
     /* create HTML of the link */
 
+    const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
+        console.log('linkHTML:', linkHTML);
+
     /* insert link into titleList */
+
+    titleList.insertAdjacentHTML('afterbegin', linkHTML);
+        console.log('titleList:', titleList);
+
+console.log('html:', html);
 
     }
     const links = document.querySelectorAll('.titles a');
@@ -78,5 +96,5 @@
     for(let link of links){
     link.addEventListener('click', titleClickHandler);
     }
-
+    }
     generateTitleLinks();
