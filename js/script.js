@@ -95,6 +95,7 @@ console.log('html:', html);
 
     for(let link of links){
     link.addEventListener('click', titleClickHandler);
+    console.log('links:', links);
     }
     }
     generateTitleLinks();
