@@ -2,8 +2,7 @@
 /* Variables */
 /* Global */
 *, *::before, *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -35,22 +34,19 @@ body {
 
 /* Layout */
 .wrapper {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-left: 10px;
 }
 
 .sidebar {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 0px;
-          flex: 1 0 0;
+  -ms-flex: 1 0 0px;
+      flex: 1 0 0;
 }
 
 .posts {
-  -webkit-box-flex: 2;
-      -ms-flex: 2 0 0px;
-          flex: 2 0 0;
+  -ms-flex: 2 0 0px;
+      flex: 2 0 0;
 }
 
 .sidebar, .posts {
@@ -104,7 +100,6 @@ body {
 }
 
 .post-tags {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
