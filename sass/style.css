@@ -61,6 +61,32 @@ body {
   border-radius: 5px;
 }
 
+/* Tags cloud */
+.sidebar, .tags {
+  display: inline;
+  text-decoration: none;
+}
+
+.tag-size-1 {
+  color: #6ab04c;
+  font-size: 17px;
+}
+
+.tag-size-2 {
+  color: #f0932b;
+  font-size: 19px;
+}
+
+.tag-size-4 {
+  color: #ffbe76;
+  font-size: 23px;
+}
+
+.tag-size-6 {
+  color: #be2edd;
+  font-size: 15px;
+}
+
 /* Logo */
 .logo {
   font-family: "Sacramento", cursive;

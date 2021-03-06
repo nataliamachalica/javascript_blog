@@ -114,7 +114,7 @@
     const classNumber = Math.floor(percentage * (opt.CloudClassCount - 1) + 1);*/
 
     const classNumber = Math.floor( ( (count - params.min) / (params.max - params.min) ) * opt.cloudClassCount + 1 );
-    console.log('classNumber:', classNumber);
+    //console.log('classNumber:', classNumber);
 
     return opt.cloudClassPrefix + classNumber;
   };
@@ -150,19 +150,24 @@
     const tagList = document.querySelector('.tags');
 
     const tagsParams = calculateTagsParams(allTags);
+    console.log('tagsParams:', tagsParams);
 
     let allTagsHTML = '';
 
     for(let tag in allTags){
 
-      const tagLinkHTML = '<li><a class="'+ calculateTagClass(allTags[tag], tagsParams) + '" href="#tag-' + tag + '">' + tag + '</a></li>' + ' ';
+      //allTagsHTML += '<li><a href="#tag-' + tag + '">' + tag + '(' + allTags[tag] + ')</a></li>';
+
+      const tagLinkHTML = '<li><a href="#tag-' + tag + '"' + 'class="' + calculateTagClass(allTags[tag], tagsParams) + '"' + '>' + tag + ' ' + '</a></li>';
+
+      //const tagLinkHTML = '<li>' + calculateTagClass(allTags[tag], tagsParams) + '</li>';
       allTagsHTML += tagLinkHTML;
     }
 
-    /* [NEW] add HTML from allTagsHTML to tagList */ // tutaj dopisać nową część do wyświetlania liczby tagów  [new] create variable for all links...
     tagList.innerHTML = allTagsHTML;
   };
-
+  calculateTagsParams();
+  //calculateTagClass();
   generateTags();
 
   const tagClickHandler = function(event){

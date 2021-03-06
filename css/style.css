@@ -7,6 +7,7 @@
 
 body {
   background: #fff;
+  background: url('https://i.postimg.cc/k5RY1m54/pexels-sidnei-maia-3489130.jpg');
   font-family: "Source Sans Pro", sans-serif;
   color: #444;
   font-weight: 300;
@@ -57,11 +58,41 @@ body {
   border-radius: 5px;
 }
 
+/* Tags cloud */
+.sidebar, .tags {
+  display: inline;
+}
+
+.tag-size-1 {
+color:#22a6b3;
+font-size: 17px;
+text-decoration: none;
+}
+
+.tag-size-2 {
+  color: #f0932b;
+  font-size: 19px;
+  text-decoration: none;
+}
+
+.tag-size-4 {
+  color:#ff7979;
+  font-size: 23px;
+  text-decoration: none;
+}
+
+.tag-size-6 {
+  color:#6ab04c;
+  font-size: 27px;
+  text-decoration: none;
+}
+
 /* Logo */
 .logo {
   font-family: "Sacramento", cursive;
+  color: #f9ca24;
   font-weight: 400;
-  font-size: 104px;
+  font-size: 144px;
   line-height: 1;
   text-align: center;
 }
